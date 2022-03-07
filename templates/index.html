@@ -1,0 +1,71 @@
+<html><head>
+<meta charset="UTF-8">
+<title>News Sentiment Prediction</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<style>
+body{
+	margin:0;
+	padding:0;
+	background: url("static/img-bg.jpg") no-repeat;
+	background-size: cover;
+	backgroun-position: center;
+}
+	.content-box{
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		flex-direction: column;
+		width: 100vw;
+		height: 100vh;
+		
+		font-family: Arial;
+	}
+	.btn-primary{
+		padding: 10px;
+		width: 300px;
+		border-radius: 50px;
+		outline: none; border: 0;
+		background:#bd0404;
+		color: #fff;
+		font-size: 18px;
+		margin-top: -20px;
+	}
+	form{
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		flex-direction: column;
+	}
+	p.pera{
+		 font-size: 20px;
+		 font-weight: 500;
+		 color: #bd0404;
+		 padding:10px;	
+		 background: #808080ad;
+		 color: #fff;
+		 border-radius: 50px;	
+		 margin-left:100px;
+		 margin-right: 100px;
+		 text-align: center;	
+	}
+</style>
+</head>
+<body>
+
+<div class="content-box">
+	<h1 style=" font-size: 60px; text-transform: uppercase; color: #bd0404; margin-bottom:0;">news sentiment</h1>
+<p class="pera"> 
+	This App Predict Sentiment of the News Based on Keywords.
+			
+</p>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="/predict" method="post">
+<input style="padding: 10px; width: 521px; border-radius: 50px; padding-left: 25px; outline: none; font-size: 18px; border: 0;" type="text" name="ADR" placeholder="Type Your Keyword" required="required" step="any"><br>
+<br>
+
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</div>
+<br>
+
+</body></html>
